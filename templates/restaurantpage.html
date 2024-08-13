@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بصيرة</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>بصيرة</h1>
+        <nav>
+            <ul>
+                <!-- Add a translate button here -->
+                <li>
+                    <button id="translate-btn" class="btn btn-primary">EN</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+        <h2>بصيرة</h2>
+        <p></p>
+        
+        <div class="grid" style="transform: scaleX(-1);">
+            <!-- Tabs Section -->
+            <div class="tabs-container">
+                <div id="inventory" class="tab">
+                    <h3>ادارة المخزون</h3>
+                    <p>راقب وأدر مخزونك بشكل افضل </p>
+                    <a href="{{ url_for('inventory') }}" class="btn btn-light text-dark d-flex flex-column align-items-center">
+                        <i class="fas fa-clipboard-list fa-2x mb-1"></i>
+                        <span class="small">الى المخزون</span>
+                    </a>
+                </div>
+                <div id="forecasting" class="tab">
+                    <h3>التنبؤ بالمخزون</h3>
+                    <p>احصل على توقعات دقيقة للطلبات على المخزون</p>
+                    <a href="{{ url_for('index') }}" class="btn btn-light text-dark d-flex flex-column align-items-center">
+                        <i class="fas fa-chart-line fa-2x mb-1"></i>
+                        <span class="small">الى التنبؤ</span>
+                    </a>
+                </div>
+                </div>
+
+
+        
+            
+
+
+            <!-- Fridge Animation Section -->
+            <div class="fridge">
+                <div class="fridge-body">
+                    <div class="door left"></div>
+                    <div class="door right"></div>
+                    <div class="handle top"></div>
+                    <div class="handle bottom"></div>
+                    <div class="divider"></div>
+                    <div class="highlight top"></div>
+                    <div class="highlight bottom"></div>
+                    <div class="shadow-bottom"></div>
+                </div>
+                <div class="fridge-shadow"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 تطبيق بصيرة.كل الحقوق محفوظة </p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
